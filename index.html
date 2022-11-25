@@ -1,163 +1,786 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Sampreet Klair</title>
-  <style>
-  @keyframes TransitionIn{
-      from{
-        opacity: 0;
-        transform: rotateX(-20deg);
-      }
-      to{
-        opacity: 1;
-        transform: rotateX(0deg);
-      }
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sampreet Klair</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/15648ddd2d.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-    body {
-      height:fit-content;
-      border: 1.489vw solid rgb(255, 255, 255);
-      animation: TransitionIn 2s;
-      margin:0%;
-      transition: color 711ms ease, background 711ms ease;      
-    }
-        
-    a:link {
-      color: #4267B2;
-    }
-    a:visited {
-      color: #4267B2;}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-weight: 700;
+        }
 
-    a:hover {
-      color: #4267B2;
-    }
-    a:active {
-      color: #4267B2;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #242424;
+        }
 
-    p{
-      font-family: 'Georgia';
-      color: rgb(226, 222, 222);
-      text-align: left;
-      margin-top: 2.978vw;
-      margin-left: 9.531vw;
-      margin-right: 9.531vw;
-      font-weight: bold;
-    }
-    
-    .p1{font-weight: bold;
-      font-family: 'Georgia';
-      font-size: 5.361vw;
-      margin-bottom: 1.191vw;
-    }
-    
-    .p2{
-      font-size: 4.051vw;
-      margin-top: 0vw;
-    }
-    .p3{
-      font-size: 2.383vw;
-      margin-bottom: 0.357vw ;
-    }
-    .img-arrow{
-      margin-left: 9.2rem;  
-      margin-top: 0rem;
-      height: 7.4376875rem;
-      width: 4.5628125rem;
-      transform: rotate(5deg);
-      margin-bottom: 0rem;
-    }
-    .p4{font-family: 'Georgia';
-      font-size: 0.9rem;
-      margin-left: 13.875rem;
-      margin-top: 0rem;
-      margin-bottom: 2rem;
-    }
-    .p5{
-      font-size: 1.1rem;
-      margin-left: 1rem;
-      max-block-size: 20rem;
-      color: #242424;
-    }
-    .p5:hover{font-size: 1.1rem;
-      margin-left: 1rem;
-      max-block-size: 20rem;
-      color: rgb(226, 222, 222);
-    }
+        a:link {
+            color: #242424;
+            text-decoration: none;
+        }
 
-    .name{
-        color: #E0610E;
-        cursor: auto;
-    }
-    .name:hover{
-        color: #4267B2;
-        cursor: pointer;
-    }
+        a:visited {
+            color: #242424;
+        }
 
-    .int{
-        color: #4267B2;
-        cursor: auto;
-    }
-    .int:hover{
-        color: #E0610E;
-        cursor: pointer;
-    }
+        a:active {
+            color: #242424;
+        }
 
-    .photo{
-        color: #4267B2;
-        cursor: auto;
-    }
-    .photo:hover{
-        color: #007769;
-        cursor: pointer;
-    }
-    
-    .link{font-weight: bold;
-        color: #4267B2;
-        cursor: auto;
-    }
-    .link:hover{font-weight: bold;
-        color: #ff8b3d7a;
-        cursor: pointer;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .p6{ font-weight: bold;
-      font-family: 'Arial black';
-      color: #4267B2;
-      font-size: 3.3rem;
-    }
-    .p6:hover{font-weight: bold;
-      font-family: 'Arial black';
-      color: #242424;
-      font-size: 3.3rem;
-      background-color: #FFFF00
-    }
-    .img-quote{
-      height: 30vw;
-      width: 30vw;
-    }
+        .header {
+            width: 100vw;
+            height: 5rem;
+            background-color: #dbdbdb;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            position: fixed;
+            font-weight: 800;
+        }
 
-    div{
-      margin-top: 0vw;
-      margin-right: 8.34vw;
-      margin-left: 8.34vw;
-      margin-bottom: 2.978vw;
-    }
-  </style>
+        p {
+            color: #dbdbdb;
+            font-weight: 700;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .nav-name {
+            font-size: 4.2rem;
+            margin-left: 2rem;
+            color: #242424;
+        }
+
+        .nav-links {
+            font-size: 1.68rem;
+            margin-top: 1.75rem;
+            display: flex;
+            gap: 3.9rem;
+            padding-right: 3rem;
+        }
+
+        .main {
+            padding-left: 4.1875rem;
+            padding-top: 7.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .line-1 {
+            font-size: 4.9rem;
+            margin-inline: 2rem;
+        }
+
+        .line-2 {
+            font-size: 3rem;
+            margin-inline: 2rem;
+        }
+
+        .headings {
+            font-size: 5rem;
+            margin-left: 2rem;
+            color: #4267B2;
+            font-family: 'Montserrat', sans-serif;
+            width: max-content;
+        }
+
+        .headings:hover {
+            color: #4267B2;
+            text-shadow: 2px 2px 1px #E0610E;
+        }
+
+        .projects-grid {
+            margin-left: 200px;
+            margin-top: 5px;
+            display: grid;
+            padding-left: 4.1875rem;
+            color: #dbdbdb;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .text-1 {
+            padding-left: 4.1875rem;
+            font-size: 2rem;
+            /* margin-right: 2rem; */
+            color: #dbdbdb;
+            margin-left: 2rem;
+        }
+
+        .text-2 {
+            padding-left: 4.1875rem;
+            font-size: 2rem;
+            margin-right: 2rem;
+            color: #dbdbdb;
+            margin-left: 2rem;
+        }
+
+        .icons {
+            color: #dbdbdb;
+            display: inline-block;
+            padding-left: 5rem;
+            position: relative;
+            left: 800px;
+        }
+
+        .icons:hover {
+            color: #4267B2;
+            text-shadow: 2px 2px 1px #E0610E;
+        }
+
+        .fa-link {
+            color: #dbdbdb;
+        }
+
+        .nothing {
+            color: #dbdbdb;
+            position: absolute;
+            left: 28px;
+            display: flex;
+            gap: 700px;
+        }
+
+        .name {
+            color: #4267B2;
+        }
+
+        .name:hover {
+            cursor: pointer;
+            text-shadow: 2px 2px 1px #E0610E;
+        }
+
+        .tech {
+            color: #4267B2;
+        }
+
+        .tech:hover {
+            text-shadow: 2px 2px 1px #E0610E;
+            cursor: pointer;
+        }
+
+        .name-heading:hover {
+            color: #4267B2;
+            text-shadow: 2px 2px 1px #E0610E;
+        }
+
+        .id {
+            color: #4267B2;
+        }
+
+        .id:hover {
+            cursor: pointer;
+            text-shadow: 2px 2px 1px #E0610E;
+        }
+
+        .fa-link:hover {
+            color: #4267B2;
+            text-shadow: 2px 2px 1px #E0610E;
+        }
+
+        .contact-links {
+            display: inline-block;
+        }
+
+        .form {
+            margin-left: 24.625rem;
+        }
+
+        .links-id {
+            position: relative;
+            top: -90px;
+            left: -50px;
+            width: max-content;
+        }
+
+        .input-a {
+            width: 40rem;
+            height: 2.5rem;
+            background-color: #242424;
+            border: 5px solid #dbdbdb;
+            margin-bottom: 1.25rem;
+            color: #dbdbdb;
+            padding-left: 8px;
+        }
+
+        .input-m {
+            width: 40rem;
+            height: 7.5rem;
+            background-color: #242424;
+            border: 5px solid #dbdbdb;
+            margin-bottom: 1.25rem;
+            color: #dbdbdb;
+            padding-left: 8px;
+        }
+
+        .input-b {
+            width: 7.5rem;
+            height: 2.5rem;
+            background-color: #4267B2;
+            border: 5px solid #dbdbdb;
+            color: #dbdbdb;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .project-1,
+            .project-2,
+            .project-3,
+            .project-4 {
+                grid-column: span 2;
+            }
+
+            .projects-grid {
+                margin-left: 0;
+                display: grid;
+                color: #dbdbdb;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-weight: 700;
+            }
+
+            body {
+                font-family: 'Montserrat', sans-serif;
+                background-color: #242424;
+            }
+
+            a:link {
+                color: #242424;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: #242424;
+            }
+
+            a:active {
+                color: #242424;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .header {
+                width: 100vw;
+                height: 4rem;
+                background-color: #dbdbdb;
+                display: flex;
+                position: sticky;
+                font-weight: 800;
+            }
+
+            p {
+                color: #dbdbdb;
+                font-weight: 700;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            .nav-name {
+                font-size: 2.5rem;
+                position: relative;
+                top: 7px;
+                left: -15px;
+            }
+
+            .nav-links {
+                /* font-size: 1.68rem;
+        margin-top: 1.75rem;
+        display: flex;
+        gap: 3.9rem;
+        padding-right: 3rem; */
+                display: none;
+            }
+
+            .main {
+                padding-inline: 0.25rem;
+            }
+
+            .line-1 {
+                font-size: 2.5rem;
+                margin-inline: 2rem;
+                position: relative;
+                top: -92px;
+            }
+
+            .line-2 {
+                font-size: 2rem;
+                margin-inline: 2rem;
+                position: relative;
+                top: -82.5px;
+            }
+
+            .headings {
+                font-size: 2.5rem;
+                margin-left: 0rem;
+                position: relative;
+                left: 30px;
+                bottom: 10px;
+                color: #4267B2;
+                font-family: 'Montserrat', sans-serif;
+                margin-bottom: 10px;
+            }
+
+            .headings:hover {
+                color: #4267B2;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+
+            .text-1 {
+                font-size: 2.1rem;
+                position: relative;
+                top: -35px;
+                left: -55px;
+                color: #dbdbdb;
+            }
+
+            .text-2 {
+                font-size: 2.1rem;
+                position: relative;
+                top: -10px;
+                left: -55px;
+                color: #dbdbdb;
+            }
+
+            .icons {
+                display: none;
+            }
+
+            .icons:hover {
+                color: #4267B2;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .fa-link {
+                color: #dbdbdb;
+            }
+
+            .nothing {
+                display: flex;
+                gap: 100px;
+                font-size: small;
+            }
+
+            .name {
+                color: #4267B2;
+            }
+
+            .name:hover {
+                cursor: pointer;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .tech {
+                color: #4267B2;
+            }
+
+            .tech:hover {
+                text-shadow: 2px 2px 1px #E0610E;
+                cursor: pointer;
+            }
+
+            .name-heading:hover {
+                color: #4267B2;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .id {
+                color: #4267B2;
+            }
+
+            .id:hover {
+                cursor: pointer;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .blank {
+                display: none;
+            }
+
+
+            .links-id {
+                position: relative;
+                top: -90px;
+                left: -50px;
+                width: max-content;
+            }
+
+            .form {
+                margin-left: 2rem;
+                margin-top: 10px;
+            }
+
+            .input-a {
+                width: 22rem;
+                height: 2.5rem;
+                background-color: #242424;
+                border: 5px solid #dbdbdb;
+                margin-bottom: 1.25rem;
+
+            }
+
+            .input-m {
+                width: 22rem;
+                height: 7.5rem;
+                background-color: #242424;
+                border: 5px solid #dbdbdb;
+                margin-bottom: 1.25rem;
+                color: #dbdbdb;
+            }
+
+            .input-b {
+                width: 7.5rem;
+                height: 2.5rem;
+                background-color: #4267B2;
+                border: 5px solid #dbdbdb;
+                color: #dbdbdb;
+                text-align: center;
+            }
+
+            .blank-1 {
+                margin-top: 125px;
+            }
+
+
+        }
+
+        @media screen and (min-width:600px) and (max-width:1100px) {
+
+            .project-1,
+            .project-2,
+            .project-3,
+            .project-4 {
+                grid-column: span 2;
+            }
+
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-weight: 700;
+            }
+
+            body {
+                font-family: 'Montserrat', sans-serif;
+                background-color: #242424;
+            }
+
+            a:link {
+                color: #242424;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: #242424;
+            }
+
+            a:active {
+                color: #242424;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .header {
+                width: 100vw;
+                height: 5rem;
+                background-color: #dbdbdb;
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                position: fixed;
+                font-weight: 800;
+            }
+
+            p {
+                color: #dbdbdb;
+                font-weight: 700;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            .nav-name {
+                font-size: 3.1rem;
+                margin-left: 1.5rem;
+                color: #242424;
+                padding-top: 10px;
+            }
+
+            .nav-links {
+                font-size: 1rem;
+                margin-top: 1.75rem;
+                display: flex;
+                gap: 2rem;
+                padding-right: 1.5rem;
+                padding-top: 5px;
+            }
+
+            .main {
+                padding-left: 4.1875rem;
+                padding-top: 7.2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .line-1 {
+                font-size: 3rem;
+                margin-inline: 1rem;
+            }
+
+            .line-2 {
+                font-size: 2.65rem;
+                /* margin-inline: 1rem; */
+            }
+
+            .headings {
+                font-size: 5rem;
+                margin-left: 2rem;
+                color: #4267B2;
+                font-family: 'Montserrat', sans-serif;
+                width: max-content;
+            }
+
+            .headings:hover {
+                color: #4267B2;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .projects-grid {
+                margin-left: 200px;
+                margin-top: 5px;
+                display: grid;
+                padding-left: 4.1875rem;
+                color: #dbdbdb;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+
+            .text-1 {
+                margin-left: 0;
+                font-size: 2rem;
+                color: #dbdbdb;
+            }
+
+            .text-2 {
+                margin-left: 0;
+                font-size: 2rem;
+                color: #dbdbdb;
+            }
+
+            .icons {
+                color: #dbdbdb;
+                display: inline-block;
+                padding-left: 5rem;
+                position: relative;
+                left: 800px;
+            }
+
+            .icons:hover {
+                color: #4267B2;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .fa-link {
+                color: #dbdbdb;
+            }
+
+            .nothing {
+                color: #dbdbdb;
+                position: absolute;
+                left: 28px;
+                display: flex;
+                gap: 500px;
+            }
+
+            .name {
+                color: #4267B2;
+            }
+
+            .name:hover {
+                cursor: pointer;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .tech {
+                color: #4267B2;
+            }
+
+            .tech:hover {
+                text-shadow: 2px 2px 1px #E0610E;
+                cursor: pointer;
+            }
+
+            .name-heading:hover {
+                color: #4267B2;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .id {
+                color: #4267B2;
+            }
+
+            .id:hover {
+                cursor: pointer;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .fa-link:hover {
+                color: #4267B2;
+                text-shadow: 2px 2px 1px #E0610E;
+            }
+
+            .contact-links {
+                display: inline-block;
+            }
+
+            .form {
+                margin-left: 4rem;
+                margin-top: 10px;
+            }
+
+            .links-id {
+                position: relative;
+                top: -90px;
+                left: -50px;
+                width: max-content;
+            }
+
+            .input-a {
+                width: 40rem;
+                height: 2.5rem;
+                background-color: #242424;
+                border: 5px solid #dbdbdb;
+                margin-bottom: 1.25rem;
+                color: #dbdbdb;
+                padding-left: 8px;
+            }
+
+            .input-m {
+                width: 40rem;
+                height: 7.5rem;
+                background-color: #242424;
+                border: 5px solid #dbdbdb;
+                margin-bottom: 1.25rem;
+                color: #dbdbdb;
+                padding-left: 8px;
+            }
+
+            .input-b {
+                width: 7.5rem;
+                height: 2.5rem;
+                background-color: #4267B2;
+                border: 5px solid #dbdbdb;
+                color: #dbdbdb;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-<body bgcolor="#242424" border="1.489vw, white">
-    <br>
-  <p class="p1"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="text-decoration: none;">👋</a> Hi, I am <span class="name">Sampreet Klair</span><br></p>
-  <br><p class="p2"> An aspiring software engineer and a person with a lot to learn ahead. I am interested in <span class="int">Backend</span>, <span class="int">Frontend</span>, <span class="int">Data Science</span> and a little bit of <span class="int">Finance</span>, <span class="int">Economics</span>.
-  <p class="p3">You can find me on all coding platforms and social websites <span class="int">@sampreetklair</span>.</p>
-  <img class="img-arrow", src="http://drive.google.com/uc?export=view&id=1gekFkezsNDyXjrbaUw4t6ukJGfzR9lc4">
-  <p class="p4"><a href="mailto:sampreetklair@gmail.com" class="link" target="__blank">Email</a>&nbsp&nbsp&nbsp<a href="https://www.linkedin.com/in/sampreetklair/" class="link" target="__blank">Linkedin</a>&nbsp&nbsp&nbsp<a href="https://github.com/sampreetklair" target="__blank" class="link">Github</a>&nbsp&nbsp&nbsp<a href="https://codeforces.com/profile/sampreetklair" class="link" target="__blank">Codeforces</a>&nbsp&nbsp&nbsp<a href="https://www.kaggle.com/sampreetklair" class="link" target="__blank">Kaggle</a>&nbsp&nbsp&nbsp<a href="https://twitter.com/sampreetklair" class="link" target="__blank">Twitter</a>&nbsp&nbsp&nbsp<a href="https://www.instagram.com/sampreetklair/" target="__blank" class="link">Instagram</a></p>
-  <p class="p5" style="font-size: 0.8rem;">PS: click on the hi emoji for a little surprise.</p>
-  <br><p class="p6" style="max-width:max-content;">Some quotes I concur with:</p>
-  <br><div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img class="img-quote" src="http://drive.google.com/uc?export=view&id=1EbcH-O5GpvO2r1hUO3RUUjIFzBTMofmE">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img class="img-quote" src="http://drive.google.com/uc?export=view&id=1tKsEcp6_qCFFRY34ByPcNsMqslYPC4UH">
-  <br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img class="img-quote" src="http://drive.google.com/uc?export=view&id=1287-I9a_iARA1e-q3TS3CCuARTbtGAvO">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img class="img-quote" src="http://drive.google.com/uc?export=view&id=1YQhtI8i-xlo3SpB0gru8-N3BBcuo-oGZ">
-  <br><br>
-</div>
-<br><br><br>
+
+<body>
+    <div class="header">
+        <div class="nav-name"><span class="name-heading">Sampreet Klair</span></div>
+        <div class="nav-links">
+            <a href="index.html">About</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
+        </div>
+    </div>
+    <div class="main">
+        <p class="line-1"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">👋</a> Hi, I am <span
+                class="name">Sampreet Klair</span></p>
+        <p class="line-2">
+            An aspiring software engineer and a person with lot to learn ahead. I am
+            interested in <span class="tech">Backend</span>, <span class="tech">Frontend</span>, <span class="tech">Data
+                Science</span> and a little bit of
+            <span class="tech">Finance</span>, <span class="tech">Economics</span>.<br />My aim is to deepen my
+            understanding in various
+            areas of <span class="tech">technology</span> and <span class="tech">product development</span>.
+        </p>
+    </div><br>
+    <div id="Projects"></div>
+    <br /><br /><br /><br />
+    <div class="headings"><u>Projects:</u></div>
+    <div class="projects-grid">
+        <div class="project-1">
+            <img src="https://via.placeholder.com/320x180
+            " alt="" />
+            <p class="project-heading">Coming Soon</p>
+            <p class="project-description">
+                Projects Description (<a href="https://github.com/sampreetklair" target="_blank"><i
+                        class="fa-solid fa-link"></i></a>)
+            </p>
+        </div>
+        <div class="project-2">
+            <img src="https://via.placeholder.com/320x180
+            " alt="" />
+            <p class="project-heading">Coming Soon</p>
+            <p class="project-description">
+                Projects Description (<a href="https://github.com/sampreetklair" target="_blank"><i
+                        class="fa-solid fa-link"></i></a>)
+            </p>
+        </div>
+        <div class="project-3">
+            <img src="https://via.placeholder.com/320x180
+            " alt="" />
+            <p class="project-heading">Coming Soon</p>
+            <p class="project-description">
+                Projects Description (<a href="https://github.com/sampreetklair" target="_blank"><i
+                        class="fa-solid fa-link"></i></a>)
+            </p>
+        </div>
+        <div class="project-4">
+            <img src="https://via.placeholder.com/320x180
+            " alt="" />
+            <p class="project-heading">Coming Soon</p>
+            <p class="project-description">
+                Projects Description (<a href="https://github.com/sampreetklair" target="_blank"><i
+                        class="fa-solid fa-link"></i></a>)
+            </p>
+        </div>
+    </div>
+    <div id="Contact"></div>
+    <br /><br /><br /><br />
+    <div class="blank-1"></div>
+    <div class="contact-links">
+        <div class="headings"><u>Contact Me:</u></div><br>
+        <div class="text-1">
+            I would be happy to further discuss my experiences with you. You can
+            connect with me everywhere <span class="id">@sampreetklair</span>.
+        </div>
+        <div class="blank">
+            <br />
+        </div>
+        <div class="text-2">or, you can fill the form below:</div>
+        <div class="blank"><br></div>
+        <div class="form">
+            <form action="#">
+                <input class="input-a" type="text" name="Name" id="name" placeholder="Name"><br>
+                <input class="input-a" type="email" name="email" id="email" placeholder="E-mail"><br>
+                <input class="input-m" type="text" name="message" id="message" placeholder="Message"><br>
+                <input class="input-b" type="button" value="Submit">
+            </form>
+        </div><br><br><br><br><br><br><br><br>
+        <div class="nothing">
+            <div class="t-1">It's nothing beyond this point</div>
+            <div class="t-2">PS: click on the hi emoji for a little surprise.</div>
+        </div><br><br>
+    </div>
 </body>
+
 </html>
