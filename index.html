@@ -2,828 +2,982 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sampreet Klair</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/15648ddd2d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        @media only screen and (min-width: 840px) {
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+                font-weight: 500;
+                /* color: white; */
+            }
 
-        html {
-             scroll-behavior: smooth;
+            body{
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                background-color: #0f0f0f;
+                font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+            a:hover{
+                color: white;
+                text-decoration: underline;
+            }
+
+            a:active{
+                color: white;
+                text-decoration: underline;
+            }
+
+            a:visited{
+                color: white;
+            }
+
+            .intro-container{
+                display: grid;
+                height: 100vh;
+                width: 100vw;
+                align-items: center;
+                justify-items: center;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .intro{
+                color: white;
+                font-size: 1.625rem;
+                margin-left: 100px;
+                text-align: left;
+            }
+
+            .name{
+                color: #4285F4c2;
+                font-weight: bold;
+            }
+
+            .name:hover{
+                text-shadow: 1.75px 1.75px 0px #252525;
+            }
+
+            .link{
+                color: #4285F4c2;
+            }
+
+            .link:hover{
+                color: #4285F4c2;
+                text-decoration: underline #4286f4ec;
+            }
+
+            .btn{
+                width: 300px;
+                height: 48px;
+                position: relative;
+                left: 59px;
+                font-size: 0.9375rem; 
+                border: 1px solid white;
+                font-weight: bolder;
+                color: white;
+                background-color: #252525;
+                margin-block: 15px;
+                margin-left: 28px;
+                border-radius: 6.3px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.36);
+
+            }
+
+            .btn:hover{
+                background-color: transparent;
+                transition-delay: 0.025s;
+            }
+
+            p{
+                color: white;
+            }
+
+
+            .container{
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+                height: max-content;
+            }
+
+            .about-all{
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .p-about{
+                font-size: 1.25rem;
+                padding: 25px;
+                padding-left: 200px;
+            }
+
+            .about-h1{
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                position: sticky;
+                position: -webkit-sticky;
+                top: 1px;
+            }
+
+            .projects-all{
+                border-radius: 6.3px;
+                width: 84%;
+                height:max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .projects-h1{
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                position: sticky;
+                position: -webkit-sticky;
+                top: 1px;
+            }
+
+            .tools{
+                padding-left: 200px;
+                padding-bottom: 25px;
+                color: white;
+                font-size: 1.25rem;
+            }
+
+            .highlight{
+                color: #4285F4c2;
+            }
+
+            .h1-contact{
+                color: white;
+            }
+
+            .contact-container{
+                display: grid;
+                height: max-content;
+                width: 100vw;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .contact-all{
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .contact-h1{
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                position: relative;
+                top: -45px;
+            }
+
+            .project-1{
+                padding: 25px;
+                border-radius: 15px;
+                margin-left: 200px;
+                margin-right: 25px;
+                margin-bottom: 25px;
+                background-color: #0f0f0f;
+            }
+
+            iframe{
+                width:867px;
+                height:520px;
+            }
+
+            .web-link{
+                position: relative;
+                left: 2px;
+            }
+
+            .king{
+                padding-top: 14px;
+                color: white;
+                display: inline-block;
+            }
+
+            .p-contact{
+                color: white;
+                padding-inline: 25px;
+                font-size: 1.25rem;
+                padding-left: 175px;
+            }
+
+            .contact-links{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .linkedin{
+                background-color: transparent;
+                color: white;
+                border: none;
+                position: relative;
+                left: 630px;
+                top: -40px;
+            }
+
+            .linkedin:hover{
+                color: #3274ddc2;
+                border: none;
+            }
+
+            .mail{
+                background-color: #252525;
+                color: white;
+                border: none;
+                position: relative;
+                left: 600px;
+                top: -40px;
+            }
+
+            .mail:hover{
+                color: #DB4437;
+                border: none;
+            }
+
+            .github{
+                background-color: transparent;
+                color: white;
+                border: none;
+                position: relative;
+                left: 660px;
+                top: -40px;
+            }
+
+            .github:hover{
+                color: black;
+                border: none;
+            }
+
+            #contact-1{
+                grid-column: span 2;
+            }
+
+            .contact-all{
+                padding-block: 83px;
+            }
+
+            .embed{
+                overflow: scroll;
+                height: 100vh;
+            }
         }
-        
-        * {
+
+        @media only screen and (min-width: 564px) and (max-width: 925px){      
+        *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            font-weight: 700;
+            font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+            font-weight: 500;
+            /* color: white; */
         }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #242424;
+        body{
+            overflow-x: hidden;
             scroll-behavior: smooth;
+            background-color: #0f0f0f;
+            font-family: 'Space Grotesk', 'Montserrat', sans-serif;
         }
 
-        a:link {
-            color: #242424;
+        a{
             text-decoration: none;
+            color: white;
+            font-weight: bold;
         }
 
-        a:visited {
-            color: #242424;
-            text-decoration: none;
+        a:hover{
+            color: white;
+            text-decoration: underline;
         }
 
-       
-        a:active {
-            color: #242424;
-            text-decoration: none;
+        a:active{
+            color: white;
+            text-decoration: underline;
         }
 
-        a:hover {
-            text-decoration: none;
+        a:visited{
+            color: white;
         }
 
-        .header {
+        .intro-container{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             width: 100vw;
-            height: 5rem;
-            background-color: #dbdbdb;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            position: fixed;
-            font-weight: 800;
         }
 
-        p {
-            color: #dbdbdb;
-            font-weight: 700;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .nav-name {
-            font-size: 4.2rem;
-            margin-left: 2rem;
-            color: #242424;
-        }
-
-        .nav-links {
-            font-size: 1.68rem;
-            margin-top: 1.75rem;
+        .intro-con{
             display: flex;
-            gap: 3.9rem;
-            padding-right: 3rem;
+            align-items: center;
+            justify-content: center;
         }
 
-        .main {
-            padding-left: 4.1875rem;
-            padding-top: 7.2rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .line-1 {
-            font-size: 4.9rem;
-            margin-inline: 2rem;
-        }
-
-        .line-2 {
+        .intro{
+            grid-column: span 2;
             font-size: 3rem;
-            margin-inline: 2rem;
-        }
-
-        .line-3 {
-            font-size: 2.8rem;
-            margin-inline: 2rem;
-            color: #dbdbdb;
-        }
-
-        .headings {
-            font-size: 5rem;
-            margin-left: 2rem;
-            color: #4267B2;
-            font-family: 'Montserrat', sans-serif;
-            width: max-content;
-        }
-
-        .headings:hover {
-            color: #4267B2;
-            text-shadow: 2px 2px 1px #E0610E;
-        }
-
-        .projects-grid {
-            margin-left: 200px;
-            margin-top: 5px;
-            display: grid;
-            padding-left: 4.1875rem;
-            color: #dbdbdb;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .text-1 {
-            padding-left: 4.1875rem;
-            font-size: 2rem;
-            /* margin-right: 2rem; */
-            color: #dbdbdb;
-            margin-left: 2rem;
-        }
-
-        .text-2 {
-            padding-left: 4.1875rem;
-            font-size: 2rem;
-            margin-right: 2rem;
-            color: #dbdbdb;
-            margin-left: 2rem;
-        }
-
-        .icons {
-            color: #dbdbdb;
-            display: inline-block;
-            padding-left: 5rem;
+            margin-inline: 20px;
             position: relative;
-            left: 800px;
+            left: 5px;
+            color: white;
         }
 
-        .icons:hover {
-            color: #4267B2;
-            text-shadow: 2px 2px 1px #E0610E;
-        }
-
-        .fa-link {
-            color: #dbdbdb;
-        }
-
-        .nothing {
-            color: #dbdbdb;
-            position: absolute;
-            left: 28px;
+        .buttons-intro{
             display: flex;
-            gap: 700px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
-        .name {
-            color: #4267B2;
-            text-shadow: 2px 2px 1px #E0610E;
+        .name{
+            color: #4285F4c2;
+            font-weight: bold;
         }
 
-        .name:hover {
-            text-shadow: 0px 0px 0px #E0610E;
+        .name:hover{
+            text-shadow: 1.75px 1.75px 0px #252525;
         }
 
-        .tech {
-            color: #4267B2;
+        .link{
+            color: #4285F4c2;
         }
 
-        .tech:hover {
-            text-shadow: 2px 2px 1px #E0610E;
-            cursor: pointer;
+        .link:hover{
+            color: #4285F4c2;
+            text-decoration: underline #4285F4c2;
         }
 
-        .name-heading:hover {
-            color: #242424;
+        .btn{
+            width: 300px;
+            height: 48px;
+            font-size: 0.9375rem; 
+            border: 1px solid white;
+            font-weight: bolder;
+            color: white;
+            background-color: #252525;
+            border-radius: 6.3px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.36);
+            margin-inline: 60px;
         }
 
-        .id {
-            color: #4267B2;
+        .btn:hover{
+            background-color: transparent;
+            transition-delay: 0.025s;
         }
 
-        .id:hover {
-            cursor: pointer;
-            text-shadow: 2px 2px 1px #E0610E;
+        .projects-button{
+            display: none;
         }
 
-        .fa-link:hover {
-            color: #4267B2;
-            text-shadow: 2px 2px 1px #E0610E;
+        .about-button{
+            margin-top: -70px;
         }
 
-        .contact-links {
-            display: inline-block;
+        .contact-button{
+            margin-bottom: 35px;
         }
 
-        .form {
-            margin-left: 24.625rem;
+        p{
+            color: white;
         }
 
-        .links-id {
+
+        .container{
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: max-content;
+        }
+
+        .about-all{
+            border-radius: 6.3px;
+            width: 84%;
+            height: max-content;
             position: relative;
-            top: -90px;
-            left: -50px;
-            width: max-content;
+            left: -9px;
+            background-color: #252525;
         }
 
-        .input-a {
-            width: 40rem;
-            height: 2.5rem;
-            background-color: #242424;
-            border: 5px solid #dbdbdb;
-            margin-bottom: 1.25rem;
-            color: #dbdbdb;
-            padding-left: 8px;
+        .p-about{
+            font-size: 1.25rem;
+            padding: 25px;
+        
         }
 
-        .input-m {
-            width: 40rem;
-            height: 7.5rem;
-            background-color: #242424;
-            border: 5px solid #dbdbdb;
-            margin-bottom: 1.25rem;
-            color: #dbdbdb;
-            padding-left: 8px;
+        .about-h1{
+            color: white;
+            padding-inline: 25px;
+            padding-top: 25px;
+            text-decoration: underline;
+            display: none;
         }
 
-        .input-b {
-            width: 7.5rem;
-            height: 2.5rem;
-            background-color: #4267B2;
-            border: 5px solid #dbdbdb;
-            color: #dbdbdb;
-            text-align: center;
+        .tools{
+            padding-inline: 25px;
+            padding-bottom: 25px;
+            color: white;
+            font-size: 1.25rem;
         }
 
-        @media screen and (min-width:600px) and (max-width:1100px) {
 
-            .project-1,
-            .project-2,
-            .project-3,
-            .project-4 {
-                grid-column: span 2;
-            }
-
-            * {
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-                font-weight: 700;
-            }
-
-            body {
-                font-family: 'Montserrat', sans-serif;
-                background-color: #242424;
-            }
-
-            a:link {
-                color: #242424;
-                text-decoration: none;
-            }
-
-            a:visited {
-                color: #242424;
-            }
-
-            a:active {
-                color: #242424;
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-
-            .header {
-                width: 100vw;
-                height: 5rem;
-                background-color: #dbdbdb;
-                display: grid;
-                grid-template-columns: 3fr 1fr;
-                position: fixed;
-                font-weight: 800;
-            }
-
-            p {
-                color: #dbdbdb;
-                font-weight: 700;
-                font-family: 'Open Sans', sans-serif;
-            }
-
-            .nav-name {
-                font-size: 3.1rem;
-                margin-left: 1.5rem;
-                color: #242424;
-                padding-top: 10px;
-            }
-
-            .nav-links {
-                font-size: 1rem;
-                margin-top: 1.75rem;
-                display: flex;
-                gap: 2rem;
-                padding-right: 1.5rem;
-                padding-top: 5px;
-            }
-
-            .main {
-                padding-left: 1.75rem;
-                padding-top: 7.2rem;
-                margin-bottom: 2.5rem;
-            }
-
-            .line-1 {
-                font-size: 3rem;
-                margin-inline: 0.5rem;
-            }
-
-            .line-2 {
-                font-size: 2.65rem;
-                margin-inline: 0.5rem;
-            }
-
-            .line-3 {
-                font-size: 2.5rem;
-                color: #dbdbdb;
-                margin-inline: 0.5rem;
-            }
-
-            .headings {
-                font-size: 5rem;
-                margin-left: 2rem;
-                color: #4267B2;
-                font-family: 'Montserrat', sans-serif;
-                width: max-content;
-            }
-
-            .headings:hover {
-                color: #4267B2;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .projects-grid {
-                margin-left: 200px;
-                margin-top: 5px;
-                display: grid;
-                padding-left: 4.1875rem;
-                color: #dbdbdb;
-                grid-template-columns: 1fr 1fr;
-                gap: 15px;
-            }
-
-            .text-1 {
-                margin-left: 0;
-                font-size: 3rem;
-                color: #dbdbdb;
-            }
-
-            .text-2 {
-                margin-left: 0;
-                font-size: 3rem;
-                color: #dbdbdb;
-            }
-
-            .icons {
-                color: #dbdbdb;
-                display: inline-block;
-                padding-left: 5rem;
-                position: relative;
-                left: 800px;
-            }
-
-            .icons:hover {
-                color: #4267B2;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .fa-link {
-                color: #dbdbdb;
-            }
-
-            .nothing {
-                color: #dbdbdb;
-                position: absolute;
-                left: 28px;
-                display: flex;
-                gap: 500px;
-            }
-
-            .name {
-                color: #4267B2;
-            }
-
-            .name:hover {
-                cursor: pointer;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .tech {
-                color: #4267B2;
-            }
-
-            .tech:hover {
-                text-shadow: 2px 2px 1px #E0610E;
-                cursor: pointer;
-            }
-
-            .name-heading:hover {
-                color: #242424;
-            }
-
-            .id {
-                color: #4267B2;
-            }
-
-            .id:hover {
-                cursor: pointer;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .fa-link:hover {
-                color: #4267B2;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .contact-links {
-                display: inline-block;
-            }
-
-            .form {
-                margin-left: 4rem;
-                margin-top: 10px;
-            }
-
-            .links-id {
-                position: relative;
-                top: -90px;
-                left: -50px;
-                width: max-content;
-            }
-
-            .input-a {
-                width: 40rem;
-                height: 2.5rem;
-                background-color: #242424;
-                border: 5px solid #dbdbdb;
-                margin-bottom: 1.25rem;
-                color: #dbdbdb;
-                padding-left: 8px;
-            }
-
-            .input-m {
-                width: 40rem;
-                height: 7.5rem;
-                background-color: #242424;
-                border: 5px solid #dbdbdb;
-                margin-bottom: 1.25rem;
-                color: #dbdbdb;
-                padding-left: 8px;
-            }
-
-            .input-b {
-                width: 7.5rem;
-                height: 2.5rem;
-                background-color: #4267B2;
-                border: 5px solid #dbdbdb;
-                color: #dbdbdb;
-                text-align: center;
-            }
+        .h1-contact{
+            color: white;
         }
 
-        /* this is the starting point ant thing beyond this point is fragile. */
-
-        @media screen and (max-width: 600px) {
-
-            .project-1,
-            .project-2,
-            .project-3,
-            .project-4 {
-                grid-column: span 2;
-            }
-
-            .projects-grid {
-                margin-left: 0;
-                display: grid;
-                color: #dbdbdb;
-                grid-template-columns: 1fr 1fr;
-                gap: 15px;
-            }
-
-            * {
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-                font-weight: 700;
-            }
-
-            body {
-                font-family: 'Montserrat', sans-serif;
-                background-color: #242424;
-            }
-
-            a:link {
-                color: #242424;
-                text-decoration: none;
-            }
-
-            a:visited {
-                color: #242424;
-            }
-
-            a:active {
-                color: #242424;
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-
-            .header {
-                width: 100vw;
-                height: 4rem;
-                background-color: #dbdbdb;
-                display: flex;
-                position: sticky;
-                font-weight: 800;
-            }
-
-            .header {
-                display: none;
-            }
-
-            p {
-                color: #dbdbdb;
-                font-weight: 700;
-                font-family: 'Open Sans', sans-serif;
-            }
-
-            .nav-name {
-                font-size: 2.5rem;
-                position: relative;
-                top: 7px;
-                left: -15px;
-            }
-
-            .nav-links {
-                /* font-size: 1.68rem;
-                margin-top: 1.75rem;
-                display: flex;
-                gap: 3.9rem;
-                padding-right: 3rem; */
-                display: none;
-            }
-
-            .main {
-                padding-inline: 0.25rem;
-            }
-
-            .line-1 {
-                font-size: 3rem;
-                margin-inline: 0.5rem;
-                position: relative;
-                top: -92px;
-            }
-
-            .line-2 {
-                font-size: 1.9rem;
-                margin-inline: 0.5rem;
-                position: relative;
-                top: -82.5px;
-            }
-
-            .line-3 {
-                color: #dbdbdb;
-                font-size: 1.9rem;
-                margin-inline: 0.5rem;
-                position: relative;
-                top: -78.5px;
-            }
-
-            .headings {
-                font-size: 2.5rem;
-                margin-left: -0.5rem;
-                position: relative;
-                left: 30px;
-                bottom: 10px;
-                color: #4267B2;
-                font-family: 'Montserrat', sans-serif;
-                margin-bottom: 10px;
-            }
-
-            .headings:hover {
-                color: #4267B2;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-
-            .text-1 {
-                font-size: 2rem;
-                margin-left: 1.5rem;
-                position: relative;
-                top: -35px;
-                left: -55px;
-                color: #dbdbdb;
-            }
-
-            .text-2 {
-                font-size: 2rem;
-                margin-left: 1.5rem;
-                position: relative;
-                top: -10px;
-                left: -55px;
-                color: #dbdbdb;
-            }
-
-            .icons {
-                display: none;
-            }
-
-            .icons:hover {
-                color: #4267B2;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .fa-link {
-                color: #dbdbdb;
-            }
-
-            .nothing {
-                display: flex;
-                gap: 100px;
-                font-size: small;
-            }
-
-            .name {
-                color: #4267B2;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .name:hover {
-                cursor: pointer;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .tech {
-                color: #4267B2;
-            }
-
-            .tech:hover {
-                text-shadow: 2px 2px 1px #E0610E;
-                cursor: pointer;
-            }
-
-
-            .id {
-                color: #4267B2;
-            }
-
-            .id:hover {
-                cursor: pointer;
-                text-shadow: 2px 2px 1px #E0610E;
-            }
-
-            .blank {
-                display: none;
-            }
-
-
-            .links-id {
-                position: relative;
-                top: -90px;
-                left: -50px;
-                width: max-content;
-            }
-
-            .form {
-                margin-left: 2rem;
-                margin-top: 10px;
-            }
-
-            .input-a {
-                width: 22rem;
-                height: 2.5rem;
-                background-color: #242424;
-                border: 5px solid #dbdbdb;
-                margin-bottom: 1.25rem;
-
-            }
-
-            .input-m {
-                width: 22rem;
-                height: 7.5rem;
-                background-color: #242424;
-                border: 5px solid #dbdbdb;
-                margin-bottom: 1.25rem;
-                color: #dbdbdb;
-            }
-
-            .input-b {
-                width: 7.5rem;
-                height: 2.5rem;
-                background-color: #4267B2;
-                border: 5px solid #dbdbdb;
-                color: #dbdbdb;
-                text-align: center;
-            }
-
-            .blank-1 {
-                margin-top: 125px;
-            }
-
-            .float-1{
-                position: relative;
-                top: -150px;
-            }
-
-            .float-2{
-                position: relative;
-                top: -135px;
-            }
-
+        .contact-container{
+            display: grid;
+            height: max-content;
+            width: 100vw;
+            align-items: center;
+            justify-items: center;
         }
+
+        .contact-all{
+            border-radius: 6.3px;
+            width: 84%;
+            height: max-content;
+            position: relative;
+            left: -9px;
+            background-color: #252525;
+        }
+
+        .contact-h1{
+            color: white;
+            padding-inline: 25px;
+            padding-top: 25px;
+            text-decoration: underline;
+            position: relative;
+            top: -45px;
+            display: none;
+        }
+
+
+        .web-link{
+            position: relative;
+            left: 2px;
+        }
+
+
+        .p-contact{
+            color: white;
+            padding-inline: 25px;
+            font-size: 1.25rem;
+            /* padding-left: 175px; */
+        }
+
+        .contact-links{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            display: none;
+        }
+
+        .linkedin{
+            background-color: #252525;
+            color: white;
+            border: none;
+            position: relative;
+            left: 710px;
+            top: -40px;
+        }
+
+        .linkedin:hover{
+            color: #3274ddc2;
+            border: none;
+        }
+
+        .mail{
+            background-color: #252525;
+            color: white;
+            border: none;
+            position: relative;
+            left: 680px;
+            top: -40px;
+        }
+
+        .mail:hover{
+            color: #DB4437;
+            border: none;
+        }
+
+        .github{
+            background-color: #252525;
+            color: white;
+            border: none;
+            position: relative;
+            left: 740px;
+            top: -40px;
+        }
+
+        .github:hover{
+            color: black;
+            border: none;
+        }
+
+        #contact-1{
+            grid-column: span 2;
+        }
+
+        .contact-all{
+            padding-block: 83px;
+        }
+
+        .embed{
+            overflow: scroll;
+            height: 50vh;
+        }
+
+        .projects{
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            background-color: #0f0f0f;
+            grid-column: span 2;
+        }
+
+        .projects-all{
+            border-radius: 6.3px;
+            grid-column: span 2;
+            width: 84%;
+            height:max-content;
+            position: relative;
+            left: -9px;
+            background-color: #252525;
+        }
+
+        .projects-h1{
+            color: white;
+            padding-inline: 25px;
+            padding-top: 25px;
+            text-decoration: underline;
+            display: none;
+        }
+
+        .highlight{
+            color: #4285F4c2;
+        }
+        
+        .project-1{
+            display: none;
+        }
+
+        .king{
+            padding-top: 14px;
+            color: white;
+            display: inline-block;
+            font-size: 1.25rem;
+        }
+
+    }
+
+        @media only screen and (max-width: 564px) {      
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+            font-weight: 500;
+            /* color: white; */
+        }
+
+        body{
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            background-color: #0f0f0f;
+            font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        a:hover{
+            color: white;
+            text-decoration: underline;
+        }
+
+        a:active{
+            color: white;
+            text-decoration: underline;
+        }
+
+        a:visited{
+            color: white;
+        }
+
+        .intro-container{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .intro-con{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .intro{
+            grid-column: span 2;
+            font-size: 1.75rem;
+            margin-inline: 20px;
+            position: relative;
+            left: 5px;
+            color: white;
+        }
+
+        .buttons-intro{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .name{
+            color: #4285F4c2;
+            font-weight: bold;
+        }
+
+        .name:hover{
+            text-shadow: 1.75px 1.75px 0px #252525;
+        }
+
+        .link{
+            color: #4285F4c2;
+        }
+
+        .link:hover{
+            color: #4285F4c2;
+            text-decoration: underline #4285F4c2;
+        }
+
+        .btn{
+            padding-top: 0;
+            width: 250px;
+            height: 48px;
+            font-size: 0.9375rem; 
+            border: 1px solid white;
+            font-weight: bolder;
+            color: white;
+            background-color: #252525;
+            border-radius: 6.3px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.36);
+            position: relative;
+            top:-25px;
+        }
+
+        .btn:hover{
+            background-color: transparent;
+            transition-delay: 0.025s;
+        }
+
+        .about-button{
+            margin-bottom: 17.5px;
+        }
+
+        .contact-button{
+            margin-top: 17.5px;
+        }
+
+        .projects-button{
+            display: none;
+        }
+
+        p{
+            color: white;
+        }
+
+
+        .container{
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: max-content;
+        }
+
+        .about-all{
+            border-radius: 6.3px;
+            width: 84%;
+            height: max-content;
+            position: relative;
+            left: -9px;
+            background-color: #252525;
+        }
+
+        .p-about{
+            font-size: 1.25rem;
+            padding: 25px;
+        
+        }
+
+        .about-h1{
+            color: white;
+            padding-inline: 25px;
+            padding-top: 25px;
+            text-decoration: underline;
+            display: none;
+        }
+
+        .tools{
+            padding-inline: 25px;
+            padding-bottom: 25px;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+
+        .h1-contact{
+            color: white;
+        }
+
+        .contact-container{
+            display: grid;
+            height: max-content;
+            width: 100vw;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .contact-all{
+            border-radius: 6.3px;
+            width: 84%;
+            height: max-content;
+            position: relative;
+            left: -9px;
+            background-color: #252525;
+        }
+
+        .contact-h1{
+            color: white;
+            padding-inline: 25px;
+            padding-top: 25px;
+            text-decoration: underline;
+            position: relative;
+            top: -45px;
+            display: none;
+        }
+
+
+        .web-link{
+            position: relative;
+            left: 2px;
+        }
+
+
+        .p-contact{
+            color: white;
+            padding-inline: 25px;
+            font-size: 1.25rem;
+            /* padding-left: 175px; */
+        }
+
+        .contact-links{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            display: none;
+        }
+
+        .linkedin{
+            background-color: #252525;
+            color: white;
+            border: none;
+            position: relative;
+            left: 710px;
+            top: -40px;
+        }
+
+        .linkedin:hover{
+            color: #3274ddc2;
+            border: none;
+        }
+
+        .mail{
+            background-color: #252525;
+            color: white;
+            border: none;
+            position: relative;
+            left: 680px;
+            top: -40px;
+        }
+
+        .mail:hover{
+            color: #DB4437;
+            border: none;
+        }
+
+        .github{
+            background-color: #252525;
+            color: white;
+            border: none;
+            position: relative;
+            left: 740px;
+            top: -40px;
+        }
+
+        .github:hover{
+            color: black;
+            border: none;
+        }
+
+        #contact-1{
+            grid-column: span 2;
+        }
+
+        .contact-all{
+            padding-block: 83px;
+        }
+
+        .embed{
+            overflow: scroll;
+            height: 50vh;
+        }
+
+        .projects{
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            background-color: #0f0f0f;
+            grid-column: span 2;
+        }
+
+        .projects-all{
+            border-radius: 6.3px;
+            grid-column: span 2;
+            width: 84%;
+            height:max-content;
+            position: relative;
+            left: -9px;
+            background-color: #252525;
+        }
+
+        .projects-h1{
+            color: white;
+            padding-inline: 25px;
+            padding-top: 25px;
+            text-decoration: underline;
+            display: none;
+        }
+
+        .highlight{
+            color: #4285F4c2;
+        }
+        
+        .project-1{
+            display: none;
+        }
+
+        .king{
+            padding-top: 14px;
+            color: white;
+            display: inline-block;
+            font-size: 1.25rem;
+        }
+
+    }
+
+
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <div class="nav-name"><span class="name-heading">Sampreet Klair</span></div>
-        <div class="nav-links">
-            <a href="https://sampreetklair.github.io/">About</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Contact">Contact</a>
+    <div class="intro-container">
+        <div class="intro-con">
+        <div class="intro">Hi, myself <span class="name glowup">Sampreet Klair</span> - a curious software developer and
+            a person with lot to learn ahead. I am interested in <a
+                href="https://en.wikipedia.org/wiki/Frontend_and_backend" target="_blank"><span
+                    class="link">Frontend</span></a>, <a href="https://en.wikipedia.org/wiki/Frontend_and_backend"
+                target="_blank"><span class="link">Backend</span></a>, <a
+                href="https://en.wikipedia.org/wiki/Data_science" target="_blank"><span class="link">Data
+                    Science</span></a> and a little bit of <a href="https://en.wikipedia.org/wiki/Finance"
+                target="_blank"><span class="link">Finance</span></a>, <a href="https://en.wikipedia.org/wiki/Economics"
+                target="_blank"><span class="link">Economics</span></a>.
+            My aim is to deepen my understanding in various areas of <a href="https://en.wikipedia.org/wiki/technology"
+                target="_blank"><span class="link">technology</span></a> and <a
+                href="https://en.wikipedia.org/wiki/Category:Product_development" target="_blank"><span
+                    class="link">product development</span></a>.
+        </div></div>
+        <div class="buttons-intro">
+            <button class="about-button btn"><a href="#about">About Me</a></button><br>
+            <button class="projects-button btn"><a href="#projects">Projects</a></button><br>
+            <button class="contact-button btn"><a href="#contact">Contact Me</a></button>
         </div>
     </div>
-    <div class="main">
-        <p class="line-1"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">👋</a> Hi, I am <span
-                class="name">Sampreet Klair</span></p>
-        <p class="line-2">
-            An aspiring software engineer and a person with lot to learn ahead. I am
-            interested in <a href="https://en.wikipedia.org/wiki/Frontend_and_backend" target="_blank"><span class="tech">Backend</span></a>, <a href="https://en.wikipedia.org/wiki/Frontend_and_backend" target="_blank"><span class="tech">Frontend</span></a>, <a href="https://en.wikipedia.org/wiki/Data_science" target="_blank"><span class="tech">Data
-            Science</span></a> and a little bit of
-            <a href="https://en.wikipedia.org/wiki/Finance" target="_blank"><span class="tech">Finance</span></a>, <a href="https://en.wikipedia.org/wiki/Economics" target="_blank"><span class="tech">Economics</span></a>.<br />
-        <div class="line-3">My aim is to deepen my understanding in various areas of <a href="https://en.wikipedia.org/wiki/Technology" target="_blank"><span class="tech">technology</span></a> and <a href="https://en.wikipedia.org/wiki/Category:Product_development" target="_blank"><span class="tech">product development</span></a>.</div>
-        </p>
-    </div><br>
-    <div class="float-1">
-        <div id="Projects"></div>
-        <br /><br /><br /><br />
-        <div class="headings"><u>Projects:</u></div>
-        <div class="projects-grid">
-            <div class="project-1">
-                <img src="https://via.placeholder.com/320x180
-            " alt="" />
-                <p class="project-heading">Coming Soon</p>
-                <p class="project-description">
-                    Projects Description (<a href="https://github.com/sampreetklair" target="_blank"><i
-                            class="fa-solid fa-link"></i></a>)
-                </p>
-            </div>
-            <div class="project-2">
-                <img src="https://via.placeholder.com/320x180
-            " alt="" />
-                <p class="project-heading">Coming Soon</p>
-                <p class="project-description">
-                    Projects Description (<a href="https://github.com/sampreetklair" target="_blank"><i
-                            class="fa-solid fa-link"></i></a>)
-                </p>
-            </div>
-            <div class="project-3">
-                <img src="https://via.placeholder.com/320x180
-            " alt="" />
-                <p class="project-heading">Coming Soon</p>
-                <p class="project-description">
-                    Projects Description (<a href="https://github.com/sampreetklair" target="_blank"><i
-                            class="fa-solid fa-link"></i></a>)
-                </p>
-            </div>
-            <div class="project-4">
-                <img src="https://via.placeholder.com/320x180
-            " alt="" />
-                <p class="project-heading">Coming Soon</p>
-                <p class="project-description">
-                    Projects Description (<a href="https://github.com/sampreetklair" target="_blank"><i
-                            class="fa-solid fa-link"></i></a>)
-                </p>
-            </div>
+    <div id="about"> </div>
+    <br>
+    <div class="about-container container">
+        <div class="about-all">
+            <h1 class="about-h1">About Me</h1>
+            <p class="p-about" style="padding-top: 25px;">My name is <span class="highlight">Sampreet Klair</span> and I enjoy creating things that live on the internet. I am always willing to learn more and am trying my best to cope up with new technologies.</p><p class="p-about" style="padding-top: 0;">I started my journey back in 2017, when I decided to represent the Computer Science Department in my annual school exibition, and I started to learn about HTML and CSS. Even though I created a very basic webpage but subsequently my interset in development and programming got even stronger. And now the hobby that I used to practise in my leisure time is much more than just a hobby.</p><p class="p-about" style="padding-top:0;">I am an <span class="highlight">aspiring software developer</span> and currently looking for new opportunities.</p>
+            <div class="tools" style="padding-bottom: 1px;">Here are a few tools/technologies I can work with:</div>
+            <div class="tools">▹ HTML <br> ▹ CSS <br> ▹ JavaScript <br> ▹ Python <br> ▹ C++ <br> ▹ React <br> ▹ NodeJS <br> ▹ MongoDB</div>
         </div>
-        <div class="float-2">
-            <div id="Contact"></div>
-            <br /><br /><br /><br />
-            <div class="blank-1"></div>
-            <div class="contact-links">
-                <div class="headings"><u>Contact Me:</u></div><br>
-                <div class="text-1">
-                    I would be happy to further discuss my experiences with you. You can
-                    connect with me everywhere <span class="id">@sampreetklair</span>.
-                </div>
-                <div class="blank">
-                    <br />
-                </div>
-                <div class="text-2">or, you can fill the form below:</div>
-                <div class="blank"><br></div>
-                <div class="form">
-                    <form action="#">
-                        <input class="input-a" type="text" name="Name" id="name" placeholder="Name" required><br>
-                        <input class="input-a" type="email" name="email" id="email" placeholder="E-mail" required><br>
-                        <input class="input-m" type="text" name="message" id="message" placeholder="Message"><br>
-                        <input class="input-b" type="button" value="Submit">
-                    </form>
-                </div><br><br><br><br><br><br><br><br>
+    </div>
+    <br><br>
+    <div id="projects"></div>
+    <br>
+    <div class="projects-container container">
+        <div class="projects-all">
+            <h1 class="projects-h1">Projects</h1>
+            <div class="project-1" style="padding-top: 0;">
+                <h2 class="king">Alternate Portfolio Website</h2>
+                 <a class="web-link" href="https://sampreetklair.github.io" target="_blank">(link)</a></p>
+                <p style="font-size: 1rem;">Previous type/Version of this portfolio website. <br> Created with the use of HTML and CSS.
                 <br><br>
+                <div class="embed"><img src="http://drive.google.com/uc?export=view&id=1KywBqUpBBDj6U85x36JlVxifsLx4lLN_" alt="Image of Project 1.">
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="contact-container">
+        <div id="contact"> </div>
+        <div class="contact-all">
+            <h1 class="contact-h1"><u>Contact Me</u></h1>
+            <h2 class="p-contact">Want to get in touch...?</h2><br>
+            <p class="p-contact">I would be happy to further discuss my experiences with you. You can connect with me everywhere <span class="name">@sampreetklair</span>.</p>
+            <br>
+            <p class="p-contact">Feel free to message me, my inbox is always open. Whether you just have a question or want to say hi, I’ll try my best to get back to you!</p>
+            <br>
+            <div class="contact-links">
+                <p id="contact-1" class="p-contact">Or you can click on the icons given here:</p>
+                <div id="contact-2" class="links-logo"><a href="mailto:sampreetklair@gmail.com"><button class="mail btn-logo" style="font-size:2.5rem; cursor: pointer;"><i class="fa fa-envelope"></i></button></a><a href="https://www.linkedin.com/in/sampreetklair/"><button class="linkedin btn-logo" style="font-size:2.5rem; cursor: pointer;"><i class="fa fa-linkedin-square"></i></button></a><a href="https://www.github.com/sampreetklair"><button class="github btn-logo" style="font-size:2.5rem; cursor: pointer;"><i class="fa fa-github"></i></button></div>
+                <div class="blank-br"><br><br><br></div>
             </div>
         </div>
     </div>
-    <div class="nothing">
-        <div class="t-1"> </div>
-        <div class="t-2">PS: click on the hi emoji for a little surprise.</div>
-   </div>
+    <br><br><br>
 </body>
-
 </html>
