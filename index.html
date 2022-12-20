@@ -9,6 +9,7 @@
     <title>Sampreet Klair</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/portrait.css" media="screen and (orientation: landscape)">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
         @media only screen and (min-width: 840px) {
@@ -19,10 +20,6 @@
                 font-family: 'Space Grotesk', 'Montserrat', sans-serif;
                 font-weight: 500;
                 /* color: white; */
-            }
-            
-            html {
-                scroll-behavior: smooth;
             }
 
             body{
@@ -238,51 +235,21 @@
             }
 
             .contact-links{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+                display: inline-block;
             }
 
-            .linkedin{
-                background-color: transparent;
-                color: white;
-                border: none;
-                position: relative;
-                left: 630px;
-                top: -40px;
+            .contact-img{
+                rotate: -20deg;
+                position: absolute;
+                left: 320px;
+                top: 315px;
             }
 
-            .linkedin:hover{
-                color: #3274ddc2;
-                border: none;
-            }
-
-            .mail{
-                background-color: #252525;
-                color: white;
-                border: none;
-                position: relative;
-                left: 600px;
-                top: -40px;
-            }
-
-            .mail:hover{
-                color: #DB4437;
-                border: none;
-            }
-
-            .github{
-                background-color: transparent;
-                color: white;
-                border: none;
-                position: relative;
-                left: 660px;
-                top: -40px;
-            }
-
-            .github:hover{
-                color: black;
-                border: none;
-
+            .contact-text{
+                font-size: 1rem;
+                position: absolute;
+                top: 412px;
+                left: 425px;
             }
 
             #contact-1{
@@ -294,15 +261,7 @@
             }
 
             .embed{
-                overflow-y: scroll;
-                overflow-x: hidden;
-                height: 90vh;
-            }
-
-            .fa{
-                border: 1px solid white;
-                padding: 11px;
-                border-radius: 5px;
+                overflow: scroll;
             }
         }
 
@@ -314,10 +273,6 @@
             font-family: 'Space Grotesk', 'Montserrat', sans-serif;
             font-weight: 500;
             /* color: white; */
-        }
-            
-        html {
-            scroll-behavior: smooth;
         }
 
         body{
@@ -626,10 +581,6 @@
             font-family: 'Space Grotesk', 'Montserrat', sans-serif;
             font-weight: 500;
             /* color: white; */
-        }
-            
-        html {
-            scroll-behavior: smooth;
         }
 
         body{
@@ -992,14 +943,14 @@
         <div class="contact-all">
             <h1 class="contact-h1"><u>Contact Me</u></h1>
             <h2 class="p-contact">Want to get in touch...?</h2><br>
-            <p class="p-contact">I would be happy to further discuss my experiences with you. You can connect with me everywhere <span class="name">@sampreetklair</span>.</p>
+                <p class="p-contact">Feel free to message me, my inbox is always open. Whether you just have a question or want to say hi, I’ll try my best to get back to you!</p>        
             <br>
-            <p class="p-contact">Feel free to message me, my inbox is always open. Whether you just have a question or want to say hi, I’ll try my best to get back to you!</p>
+                <p class="p-contact">I would be happy to further discuss my experiences with you. You can connect with me everywhere <span class="name">@sampreetklair</span>.</p>
             <br>
             <div class="contact-links">
-                <p id="contact-1" class="p-contact">Or you can click on the icons given here:</p>
-                <div id="contact-2" class="links-logo"><a href="mailto:sampreetklair@gmail.com"><button class="mail btn-logo" style="font-size:1.5rem; cursor: pointer;"><i class="fa fa-envelope"></i></button></a><a href="https://www.linkedin.com/in/sampreetklair/"><button class="linkedin btn-logo" style="font-size:1.5rem; cursor: pointer;"><i class="fa fa-linkedin-square"></i></button></a><a href="https://www.github.com/sampreetklair"><button class="github btn-logo" style="font-size:1.5rem; cursor: pointer;"><i class="fa fa-github"></i></button></div>
-                <div class="blank-br"><br><br><br></div>
+                <div class="contact-img"><img src="https://drive.google.com/uc?export=view&id=1gekFkezsNDyXjrbaUw4t6ukJGfzR9lc4"></div>
+                <div class="contact-text"><a style="color: #4285F4c2;" href="mailto:sampreetklair@gmail.com">Email</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a style="color: #4285F4c2;" href="https://www.linkedin.com/in/sampreetklair/">Linkedin</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a style="color: #4285F4c2;" href="https://github.com/sampreetklair">Github</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a style="color: #4285F4c2;" href="https://leetcode.com/sampreetklair/">Leetcode</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a style="color: #4285F4c2;" href="https://codeforces.com/profile/sampreetklair">Codeforces</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a style="color: #4285F4c2;" href="https://www.kaggle.com/sampreetklair">Kaggle</a></div>
+            <br><br><br>
             </div>
         </div>
     </div>
