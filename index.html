@@ -5,63 +5,1069 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <title>Sampreet Klair</title>
+    <link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=1xHQFlIUf6y5jx3k5RY2f5gEUMUkI8mq3"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/portrait.css" media="screen and (orientation: landscape)">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        @media only screen and (min-width: 840px) {
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+                font-weight: 500;
+                /* color: white; */
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                background-color: #0f0f0f;
+                font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+            a:hover {
+                color: white;
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: white;
+                text-decoration: underline;
+            }
+
+            a:visited {
+                color: white;
+            }
+
+            .intro-container {
+                display: grid;
+                height: 100vh;
+                width: 100vw;
+                align-items: center;
+                justify-items: center;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .intro {
+                color: white;
+                font-size: 1.625rem;
+                margin-left: 100px;
+                text-align: left;
+            }
+
+            .name {
+                color: #4285F4c2;
+                font-weight: bold;
+            }
+
+            /*.name:hover{
+                text-shadow: 0.75px 0.75px 0px white;
+            }*/
+
+            .link {
+                color: #4285F4c2;
+            }
+
+            .link:hover {
+                color: #4285F4c2;
+                text-decoration: underline #4285F4c2;
+            }
+
+            .btn {
+                width: 18.75rem;
+                height: 3rem;
+                position: relative;
+                left: 59px;
+                font-size: 0.9375rem;
+                border: 1px solid white;
+                font-weight: bolder;
+                color: white;
+                background-color: #252525;
+                margin-block: 15px;
+                margin-left: 28px;
+                border-radius: 6.3px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.36);
+
+            }
+
+            .btn:hover {
+                background-color: transparent;
+                transition-delay: 0.025s;
+            }
+
+            p {
+                color: white;
+            }
+
+
+            .container {
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+                height: max-content;
+            }
+
+            .about-all {
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .p-about {
+                font-size: 1.25rem;
+                padding: 25px;
+                padding-left: 200px;
+            }
+
+            .about-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                position: sticky;
+                position: -webkit-sticky;
+                top: 1px;
+            }
+
+            .projects-all {
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .projects-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                position: sticky;
+                position: -webkit-sticky;
+                top: 1px;
+            }
+
+            .tools {
+                padding-left: 200px;
+                padding-bottom: 25px;
+                color: white;
+                font-size: 1.25rem;
+            }
+
+            .highlight {
+                color: #4285F4c2;
+            }
+
+            .h1-contact {
+                color: white;
+            }
+
+            .contact-container {
+                display: grid;
+                height: max-content;
+                width: 100vw;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .contact-all {
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .contact-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                position: relative;
+                top: -45px;
+            }
+
+            .project-n {
+                padding: 25px;
+                border-radius: 15px;
+                margin-left: 200px;
+                margin-right: 25px;
+                margin-bottom: 25px;
+                background-color: #0f0f0f;
+                padding-top: 0;
+            }
+
+            iframe {
+                width: 867px;
+                height: 520px;
+            }
+
+            .web-link {
+                position: relative;
+                left: 2px;
+            }
+
+            .king {
+                padding-top: 14px;
+                color: white;
+                display: inline-block;
+                font-size: 1.75rem;
+            }
+
+            .p-contact {
+                color: white;
+                padding-inline: 25px;
+                font-size: 1.25rem;
+                padding-left: 175px;
+            }
+
+            .contact-links {
+                display: inline-block;
+            }
+
+            .contact-img {
+                /* rotate: -20deg; */
+                position: absolute;
+                left: 155px;
+                top: 160px;
+            }
+
+            .contact-text {
+                font-size: 1rem;
+                position: absolute;
+                top: 430px;
+                left: 395px;
+            }
+
+            #contact-1 {
+                grid-column: span 2;
+            }
+
+            .contact-all {
+                padding-block: 83px;
+            }
+
+            .embed {
+                overflow: scroll;
+                height: 77.5vh;
+            }
+
+            .head-contact-none {
+                display: none;
+            }
+
+            .head-about-none {
+                display: none;
+            }
+
+            .head-project-none {
+                display: none;
+            }
+
+            .basic {
+                position: absolute;
+                font-size: 0.75rem;
+            }
+
+        }
+
+        @media only screen and (min-width: 500px) and (max-width: 925px) {
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+                font-weight: 500;
+                /* color: white; */
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                background-color: #0f0f0f;
+                font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+            a:hover {
+                color: white;
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: white;
+                text-decoration: underline;
+            }
+
+            a:visited {
+                color: white;
+            }
+
+            .intro-container {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .intro-con {
+                display: flex;
+                align-items: left;
+                justify-content: center;
+            }
+
+            .intro {
+                grid-column: span 2;
+                font-size: 1.8rem;
+                margin-inline: 20px;
+                position: relative;
+                left: 5px;
+                color: white;
+                padding-inline: 70px;
+            }
+
+            .buttons-intro {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .name {
+                color: #4285F4c2;
+                font-weight: bold;
+            }
+
+            .name:hover {
+                text-shadow: 1.75px 1.75px 0px #252525;
+            }
+
+            .link {
+                color: #4285F4c2;
+            }
+
+            .link:hover {
+                color: #4285F4c2;
+                text-decoration: underline #4285F4c2;
+            }
+
+            .btn {
+                width: 18.75rem;
+                height: 3rem;
+                font-size: 0.9375rem;
+                border: 1px solid white;
+                font-weight: bolder;
+                color: white;
+                background-color: #252525;
+                border-radius: 6.3px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.36);
+                margin-inline: 60px;
+            }
+
+            .btn:hover {
+                background-color: transparent;
+                transition-delay: 0.025s;
+            }
+
+            .projects-button {
+                margin-block: 30px;
+            }
+
+            /* .about-button {
+                margin-top: -70px;
+            } */
+
+            .contact-button {
+                margin-bottom: 35px;
+            }
+
+            p {
+                color: white;
+            }
+
+
+            .container {
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+                height: max-content;
+            }
+
+            .about-all {
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .p-about {
+                font-size: 1.25rem;
+                padding: 25px;
+
+            }
+
+            .about-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                display: none;
+            }
+
+            .tools {
+                padding-inline: 25px;
+                padding-bottom: 25px;
+                color: white;
+                font-size: 1.25rem;
+            }
+
+
+            .h1-contact {
+                color: white;
+            }
+
+            .contact-container {
+                display: grid;
+                height: max-content;
+                width: 100vw;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .contact-all {
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .contact-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                position: relative;
+                top: -45px;
+                display: none;
+            }
+
+
+            .web-link {
+                position: relative;
+                left: 2px;
+            }
+
+
+            .p-contact {
+                color: white;
+                padding-inline: 25px;
+                font-size: 1.25rem;
+                /* padding-left: 175px; */
+            }
+
+            .contact-text {
+                font-size: 0.85rem;
+                position: absolute;
+                left: 100px;
+                top: 420px;
+            }
+
+            .contact-img {
+                height: 75px;
+                position: absolute;
+                left: 22.5px;
+                top: 175px;
+            }
+
+            #contact-1 {
+                grid-column: span 2;
+            }
+
+            .contact-all {
+                padding-block: 83px;
+            }
+
+            .embed {
+                overflow: scroll;
+                height: 50vh;
+            }
+
+            .projects {
+                padding: 25px;
+                border-radius: 15px;
+                margin-bottom: 25px;
+                background-color: #0f0f0f;
+                grid-column: span 2;
+            }
+
+            .projects-all {
+                border-radius: 6.3px;
+                grid-column: span 2;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .projects-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                display: none;
+            }
+
+            .highlight {
+                color: #4285F4c2;
+            }
+
+            .project-n {
+                position: relative;
+                left: 25px;
+                margin-right: 40px;
+                margin-block: 50px;
+            }
+
+            .king {
+                padding-top: 14px;
+                color: white;
+                display: inline-block;
+                font-size: 1.55rem;
+            }
+
+            .head-about-none {
+                color: white;
+                text-decoration: underline;
+                position: relative;
+                top: 15px;
+                left: 25px;
+            }
+
+            .head-project-none {
+                color: white;
+                text-decoration: underline;
+                position: relative;
+                top: 30px;
+                left: 25px;
+            }
+
+            .head-contact-none {
+                color: white;
+                text-decoration: underline;
+                position: relative;
+                top: -30px;
+                left: 25px;
+            }
+
+            .basic {
+                display: none;
+            }
+
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+                font-weight: 500;
+                /* color: white; */
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                background-color: #0f0f0f;
+                font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+            a:hover {
+                color: white;
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: white;
+                text-decoration: underline;
+            }
+
+            a:visited {
+                color: white;
+            }
+
+            .intro-container {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .intro-con {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .intro {
+                grid-column: span 2;
+                font-size: 1.3rem;
+                margin-inline: 20px;
+                position: relative;
+                left: 5px;
+                color: white;
+            }
+
+            .buttons-intro {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .name {
+                color: #4285F4c2;
+                font-weight: bold;
+            }
+
+            .name:hover {
+                text-shadow: 1.75px 1.75px 0px #252525;
+            }
+
+            .link {
+                color: #4285F4c2;
+            }
+
+            .link:hover {
+                color: #4285F4c2;
+                text-decoration: underline #4285F4c2;
+            }
+
+            .btn {
+                padding-top: 0;
+                width: 15.625rem;
+                height: 3rem;
+                font-size: 0.9375rem;
+                border: 1px solid white;
+                font-weight: bolder;
+                color: white;
+                background-color: #252525;
+                border-radius: 6.3px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.36);
+                position: relative;
+                top: -25px;
+            }
+
+            .btn:hover {
+                background-color: transparent;
+                transition-delay: 0.025s;
+            }
+
+            .about-button {
+                margin-bottom: 17.5px;
+            }
+
+            .contact-button {
+                margin-top: 17.5px;
+            }
+
+            .projects-button {
+                margin-block: 10px;
+            }
+
+            p {
+                color: white;
+            }
+
+
+            .container {
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+                height: max-content;
+            }
+
+            .about-all {
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .p-about {
+                font-size: 1.25rem;
+                padding: 25px;
+
+            }
+
+            .about-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                display: none;
+            }
+
+            .tools {
+                padding-inline: 25px;
+                padding-bottom: 25px;
+                color: white;
+                font-size: 1.25rem;
+            }
+
+
+            .h1-contact {
+                color: white;
+            }
+
+            .contact-container {
+                display: grid;
+                height: max-content;
+                width: 100vw;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .contact-all {
+                border-radius: 6.3px;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .contact-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                position: relative;
+                top: -45px;
+                display: none;
+            }
+
+
+            .web-link {
+                position: relative;
+                left: 2px;
+            }
+
+
+            .p-contact {
+                color: white;
+                padding-inline: 25px;
+                font-size: 1.25rem;
+                /* padding-left: 175px; */
+            }
+
+            .contact-links {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                display: none;
+            }
+
+            .linkedin {
+                background-color: #252525;
+                color: white;
+                border: none;
+                position: relative;
+                left: 710px;
+                top: -40px;
+            }
+
+            .linkedin:hover {
+                color: #3274ddc2;
+                border: none;
+            }
+
+            .mail {
+                background-color: #252525;
+                color: white;
+                border: none;
+                position: relative;
+                left: 680px;
+                top: -40px;
+            }
+
+            .mail:hover {
+                color: #DB4437;
+                border: none;
+            }
+
+            .github {
+                background-color: #252525;
+                color: white;
+                border: none;
+                position: relative;
+                left: 740px;
+                top: -40px;
+            }
+
+            .github:hover {
+                color: black;
+                border: none;
+            }
+
+            #contact-1 {
+                grid-column: span 2;
+            }
+
+            .contact-all {
+                padding-block: 83px;
+            }
+
+            .embed {
+                overflow: scroll;
+                height: 50vh;
+            }
+
+            .projects {
+                padding: 25px;
+                border-radius: 15px;
+                margin-bottom: 25px;
+                background-color: #0f0f0f;
+                grid-column: span 2;
+            }
+
+            .projects-all {
+                border-radius: 6.3px;
+                grid-column: span 2;
+                width: 84%;
+                height: max-content;
+                position: relative;
+                left: -9px;
+                background-color: #252525;
+            }
+
+            .projects-h1 {
+                color: white;
+                padding-inline: 25px;
+                padding-top: 25px;
+                text-decoration: underline;
+                display: none;
+            }
+
+            .highlight {
+                color: #4285F4c2;
+            }
+
+
+            .king {
+                padding-top: 14px;
+                color: white;
+                display: inline-block;
+                font-size: 1.25rem;
+            }
+
+            .project-n {
+                position: relative;
+                left: 25px;
+                margin-right: 40px;
+                margin-block: 25px;
+            }
+
+            .head-about-none {
+                color: white;
+                text-decoration: underline;
+                position: relative;
+                top: 15px;
+                left: 25px;
+            }
+
+            .head-project-none {
+                color: white;
+                text-decoration: underline;
+                position: relative;
+                top: 20px;
+                left: 25px;
+            }
+
+            .head-contact-none {
+                color: white;
+                text-decoration: underline;
+                position: relative;
+                top: -15px;
+                left: 25px;
+            }
+
+            .basic {
+                display: none;
+            }
+
+
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Sampreet Klair</h1>
-    <p>Hi, I am a curious software developer and a person with lot to learn ahead. I am interested
-        in <a href="https://en.wikipedia.org/wiki/Frontend_and_backend">Frontend</a>,
-        <a href="https://en.wikipedia.org/wiki/Frontend_and_backend">Backend</a>,
-        <a href="https://en.wikipedia.org/wiki/Data_science">Data Science</a> and a little bit of
-        <a href="https://en.wikipedia.org/wiki/Finance">Finance</a>,
-        <a href="https://en.wikipedia.org/wiki/Economics">Economics</a>. My aim is to deepen my understanding
-        in various areas of <a href="https://en.wikipedia.org/wiki/technology">technology</a> and
-        <a href="https://en.wikipedia.org/wiki/Category:Product_development">product development</a>.
-    </p>
-    <hr>
-    <h2>About Me</h2>
-    <p>My name is Sampreet Klair and I enjoy creating things that live on the internet. I am always willing to learn
-        more and am trying my best to cope up with new technologies.<br>
-        I started my journey back in 2017, when I decided to represent the Computer Science Department in my annual
-        school exibition, and I started to learn about HTML and CSS. Even though I created a very basic webpage but
-        subsequently my interset in development and programming got even stronger. And now the hobby that I used to
-        practise in my leisure time is much more than just a hobby.<br>
-        I am an aspiring software developer and currently looking for new opportunities.<br>
-        Here are a few tools/technologies I can work with:<br>
-        - HTML<br>
-        - CSS<br>
-        - JavaScript<br>
-        - Python<br>
-        - C++<br>
-        - React<br>
-        - NodeJS<br>
-        - MongoDB</p>
-    <hr>
-    <h2>Projects</h2>
-    <p><b>Weather Application <a href="https://weather-sampreetklair.netlify.app/">(link)</a></b><br>
-        A real-time application which tells the weather of a city by taking an input.<br>
-        Created with the use of HTML, CSS and Vanilla JavaScript, additionally a weather api was used to fetch the data.
-    </p>
-    <p><b>Alternate Portfolio Website <a href="https://portfolio-v2-sampreetklair.netlify.app/">(link)</a></b><br>
-        Previous type/Version of this portfolio website.<br>
-        Created with the use of HTML and CSS.
-    </p>
-    <hr>
-    <h2>Contact Me</h2>
-    <p><b>Want to get in touch...?</b></p>
-    Feel free to message me, my inbox is always open.<br>
-    I would be happy to further discuss my experiences with you. You can connect with me everywhere
-    @sampreetklair.
+    <div>
+        <a class="basic" href="https://portfolio-v0-sampreetklair.netlify.app/">click here for the basic version</a>
+    </div>
+    <div class="intro-container">
+        <div class="intro-con">
+            <div class="intro">Hi, myself <span class="name glowup">Sampreet Klair</span> - a curious software developer
+                and
+                a person with lot to learn ahead. I am interested in <a
+                    href="https://en.wikipedia.org/wiki/Frontend_and_backend" target="_blank"><span
+                        class="link">Frontend</span></a>, <a href="https://en.wikipedia.org/wiki/Frontend_and_backend"
+                    target="_blank"><span class="link">Backend</span></a>, <a
+                    href="https://en.wikipedia.org/wiki/Data_science" target="_blank"><span class="link">Data
+                        Science</span></a> and a little bit of <a href="https://en.wikipedia.org/wiki/Finance"
+                    target="_blank"><span class="link">Finance</span></a>, <a
+                    href="https://en.wikipedia.org/wiki/Economics" target="_blank"><span
+                        class="link">Economics</span></a>.
+                My aim is to deepen my understanding in various areas of <a
+                    href="https://en.wikipedia.org/wiki/technology" target="_blank"><span
+                        class="link">technology</span></a> and <a
+                    href="https://en.wikipedia.org/wiki/Category:Product_development" target="_blank"><span
+                        class="link">product development</span></a>.
+            </div>
+        </div>
+        <div class="buttons-intro">
+            <button class="about-button btn"><a href="#about">About Me</a></button><br>
+            <button class="projects-button btn"><a href="#projects">Projects</a></button><br>
+            <button class="contact-button btn"><a href="#contact">Contact Me</a></button>
+        </div>
+    </div>
+    <div id="about"> </div>
     <br>
-    <a href="mailto:sampreetklair@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/sampreetklair">Linkedin</a>
-    <a href="https://www.github.com/sampreetklair">Github</a>
-    <a href="https://leetcode.com/sampreetklair/">Leetcode</a>
-    <a href="https://codeforces.com/profile/sampreetklair">Codeforces</a>
-    <a href="https://www.kaggle.com/sampreetklair">Kaggle</a>
+    <div class="about-container container">
+        <div class="about-all">
+            <h1 class="about-h1">About Me</h1>
+            <h1 class="head-about-none">About Me</h1>
+            <p class="p-about" style="padding-top: 25px;">My name is <span class="highlight">Sampreet Klair</span> and I
+                enjoy creating things that live on the internet. I am always willing to learn more and am trying my best
+                to cope up with new technologies.</p>
+            <p class="p-about" style="padding-top: 0;">I started my journey back in 2017, when I decided to represent
+                the Computer Science Department in my annual school exibition, and I started to learn about HTML and
+                CSS. Even though I created a very basic webpage but subsequently my interset in development and
+                programming got even stronger. And now the hobby that I used to practise in my leisure time is much more
+                than just a hobby.</p>
+            <p class="p-about" style="padding-top:0;">I am an <span class="highlight">aspiring software developer</span>
+                and currently looking for new opportunities.</p>
+            <div class="tools" style="padding-bottom: 1px;">Here are a few tools/technologies I can work with:</div>
+            <div class="tools">▹ HTML <br> ▹ CSS <br> ▹ JavaScript <br> ▹ Python <br> ▹ C++ <br> ▹ React <br> ▹ NodeJS
+                <br> ▹ MongoDB
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div id="projects"></div>
     <br>
-    </p>
+    <div class="projects-container container">
+        <div class="projects-all">
+            <h1 class="projects-h1">Projects</h1>
+            <h1 class="head-project-none">Projects</h1>
+            <div class="project-n">
+                <h2 class="king">Weather Application</h2>
+                <a class="web-link" href="https://weather-sampreetklair.netlify.app/" target="_blank"
+                    style=" color:#4285F4c2;">(link)</a></p>
+                <p style="font-size: 1rem;">A real-time application which tells the weather of a city by taking an
+                    input. <br> Created with the use of HTML, CSS and Vanilla JavaScript, additionally a weather api was
+                    used to fetch the data.
+                    <br><br>
+                <div class="embed" style="height: 500px;"><img style="height: 500px;"
+                        src="https://drive.google.com/uc?export=view&id=1tp3QV06PEP7NTTwwOVG_gnPfToyKyrlv"
+                        alt="Image of Project 1.">
+                </div>
+            </div>
+            <div class="project-n">
+                <h2 class="king">Alternate Portfolio Website</h2>
+                <a class="web-link" href="https://portfolio-v2-sampreetklair.netlify.app/" target="_blank"
+                    style=" color:#4285F4c2;">(link)</a></p>
+                <p style="font-size: 1rem;">Previous type/Version of this portfolio website. <br> Created with the use
+                    of HTML and CSS.
+                    <br><br>
+                <div class="embed"><img
+                        src="https://drive.google.com/uc?export=view&id=1KywBqUpBBDj6U85x36JlVxifsLx4lLN_"
+                        alt="Image of Project 1.">
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="contact-container">
+        <div id="contact"> </div>
+        <div class="contact-all">
+            <h1 class="contact-h1"><u>Contact Me</u></h1>
+            <h1 class="head-contact-none">Contact Me</h1>
+            <h2 class="p-contact">Want to get in touch...?</h2><br>
+            <p class="p-contact">Feel free to message me, my inbox is always open. Whether you have a question or just
+                want to say hi, I’ll try my best to get back to you!</p>
+            <br>
+            <p class="p-contact">I would be happy to further discuss my experiences with you. You can connect with me
+                everywhere <span class="name">@sampreetklair</span>.</p>
+            <br>
+            <div class="contact-links">
+                <div class="contact-img"><img class="contact-img"
+                        src="https://drive.google.com/uc?export=view&id=1gekFkezsNDyXjrbaUw4t6ukJGfzR9lc4"></div>
+                <div class="contact-text"><a style="color: #4285F4c2;"
+                        href="mailto:sampreetklair@gmail.com">Email</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a
+                        style="color: #4285F4c2;"
+                        href="https://www.linkedin.com/in/sampreetklair/">Linkedin</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a
+                        style="color: #4285F4c2;"
+                        href="https://github.com/sampreetklair">Github</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a
+                        style="color: #4285F4c2;"
+                        href="https://leetcode.com/sampreetklair/">Leetcode</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a
+                        style="color: #4285F4c2;"
+                        href="https://codeforces.com/profile/sampreetklair">Codeforces</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a
+                        style="color: #4285F4c2;" href="https://www.kaggle.com/sampreetklair">Kaggle</a></div>
+                <br><br><br><br>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
 </body>
 
 </html>
